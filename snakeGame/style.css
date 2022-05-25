@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(117, 117, 117);
+}
+
+#score{
+    font-size: 4rem;
+    color:rgb(255, 95, 95);
+    margin-top: 10vh;
+    margin-bottom: 5vh
+}
+
+#game-canvas{
+    margin-top: 5vh;
+}
+
+h1{
+    font-size: 6rem;
+    margin-top: 35vh;
+    color: rgb(255, 95, 95);
+}
