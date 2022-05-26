@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: rgb(205,205,212);
+    background: linear-gradient(90deg, rgba(205,205,212,1) 0%, rgba(245,245,245,1) 29%, rgba(211,228,232,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+img{
+    width: 100%;
+}
+
+.mobile-container{
+    box-shadow: 0 0 10px 3px rgb(177, 175, 175);
+    border-radius: 10px;
+    width: 400px;
+    background-color: white;
+    overflow: hidden;
+}
+
+header{
+    font-family: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+header input{
+    border: none;
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+}
+
+header button{
+    background-color: transparent;
+    font-size: 2rem;
+    border: none;
+    color: #aaa;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.fav-container{ 
+    padding: 0.25rem 1rem;
+    text-align: center;
+    background-color: rgb(234, 246, 255);
+    /* height: 200px; */
+}
+
+.fav-meals{
+    display: flex;
+    overflow: auto;
+    margin-top: 30px;
+    height: 150px;
+    /* flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; */
+    list-style-type: none;
+    padding: 0;
+}
+
+.fav-meals li{
+    width: 90px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.fav-meals li img{
+    border: 2px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
+    box-shadow: 0 0 10px 3px rgb(177, 175, 175); 
+}
+
+.fav-meals li .clear{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    color: rgb(67, 67, 67);
+    left: 0;
+    /* margin-left: -100px; */
+}
+
+.fav-meals li:hover .clear{
+    opacity: 1;
+}
+
+.fav-meals li span{
+    display: inline-block;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 95px;
+}
+
+.fav-meals li:hover span{
+    white-space: normal;
+    overflow: auto;
+}
+
+.meal{
+    margin: 1.5rem;
+    box-shadow: 0 0 10px 3px rgb(216, 216, 216);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.meal-header{
+    position: relative;
+}
+
+.meal-header .random{
+    position: absolute;
+    top: 1rem;
+    background-color: rgb(236, 233, 233);
+    padding: 0.25rem 0.5rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.meal-header img{
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.meal-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.meal-body h4{
+    margin: 0;
+}
+
+.meal-body .fav-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: rgb(184, 184, 184);
+    cursor: pointer;
+}
+
+.meal-body .fav-btn.active{
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: rgb(255, 101, 101);
+}
+
+.popup-container{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .5);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.popup-container.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup{
+    background-color: white;
+    max-width: 600px;
+    padding: 0 2rem;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    max-height: 100vh;
+    overflow: auto;
+}
+
+.popup img{
+    aspect-ratio: 1/0.8;
+    width: 80%;
+}
+
+.meal-info p{
+    font-size: 0.8rem;
+}
+
+.meal-info ul{
+    text-align: left;
+}
+
+.meal-info li{
+    list-style-type: disc;
+}
+
+.popup #close-popup{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+
